@@ -11,8 +11,11 @@ function newBook(title,author,pages,read) {
       let newPages = document.getElementById('pages').value;
       let newRead = document.getElementById('read').value;
      
-      new Book(newTitle,newAuthor,newPages,newRead); 
-   
+    new Book(newTitle,newAuthor,newPages,newRead); 
+   document.getElementById('newTitle').value= '';
+   document.getElementById('newAuthor').value= '';
+   document.getElementById('newPages').value= '';
+   document.getElementById('newRead').value= '';
       
       
   }
