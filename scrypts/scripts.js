@@ -10,6 +10,10 @@ function newBook(title,author,pages,read) {
       let newAuthor = document.getElementById('author').value;
       let newPages = document.getElementById('pages').value;
       let newRead = document.getElementById('read').value;
-    
+     
+      new Book(newTitle,newAuthor,newPages,newRead); 
+   
+      
+      
   }
   
