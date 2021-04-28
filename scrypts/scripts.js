@@ -7,6 +7,9 @@ function newBook(title,author,pages,read) {
   }
   function addBookToLibrary() {
       let newTitle = document.getElementById(title)
+      let newAuthor = document.getElementById(author)
+      let newPages = document.getElementById(pages)
+      let newRead = document.getElementById(read)
     
   }
   
