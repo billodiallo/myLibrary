@@ -6,10 +6,10 @@ function newBook(title,author,pages,read) {
 
   }
   function addBookToLibrary() {
-      let newTitle = document.getElementById(title)
-      let newAuthor = document.getElementById(author)
-      let newPages = document.getElementById(pages)
-      let newRead = document.getElementById(read)
+      let newTitle = document.getElementById('title').value;
+      let newAuthor = document.getElementById('author').value;
+      let newPages = document.getElementById('pages').value;
+      let newRead = document.getElementById('read').value;
     
   }
   
