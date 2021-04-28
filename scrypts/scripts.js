@@ -5,4 +5,8 @@ function newBook(title,author,pages,read) {
     this.read = read;
 
   }
+  function addBookToLibrary() {
+      let newTitle = document.getElementById(title)
+    
+  }
   
