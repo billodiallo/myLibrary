@@ -5,51 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"   href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
     <title>Our javacript library</title>
 </head>
 
 <body>
-  
     <div id='hiddenForm' class='hidden'>
         <div id='hiddenFormDiv'>
-          <div id ='userForm'>
+            <div id='userForm'>
 
-        <table class='tables'>
-            <tr>
-        <span class='forspan'>Title</span><br>
-        <span class='forspan'>Author</span><br>
-        <span class='forspan'>Pages</span><br>
-        <span class='forspan'>Read</span><br>
-    </tr>
-</table>
-<table id='libraryTable' class='tables'>
+                <div id='formElem'>
+                    <span class='forspan'>Title:</span><br>
+                    <span class='forspan'>Author:</span><br>
+                    <span class='forspan'>Pages:</span><br>
+                    <span class='forspan'>Read:</span><br>
+                    <span class='forspan'></span>
+                </div>
 
-</table>
-
-
-    </div>
-
-
-    <form>
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="newTitle" name="title"><br>
-            <label for="author">Author:</label>
-            <input type="text" id="newAuthor" name="Author"><br>
-            <label for="pages">Pages:</label>
-            <input type="text" id="newPages" name="Pages"><br>
-            <label for="Read">Read:</label>
-            <input type="text" id="newRead" name="read"><br>
-            <button onclick="addBookToLibrary()" class="tablebuttons">Add New Book</button>
-            <button onclick="showForm()" class='tableButtons'>Cancel</button>
+                <div id='inputElem'>
+                    <input class='input' type="text" id='newTitle'><br>
+                    <input class='input' type="text" id='newAuthor'><br>
+                    <input class='input' type="text" id='newPages'><br>
+                    <input class='input' type="text" id='newRead'><br>
+                    <button onclick='addBookToLibrary()' class='tableButtons'>Submit</button>
+                    <button onclick='showForm()' class='tableButtons'>Cancel</button>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
 
-    </form>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <div class="table table-striped">
+        <table class='tables'>
+            <tr>
+                <th scope="col">Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th>Mark Read</th>
+                <th>Delete Entry</th>
+            </tr>
+        </table>
+        <table id='libraryTable' class='tables'>
+
+        </table>
+    </div>
+
+    <div id='addDiv'>
+        <button id='addButton' onclick='showForm()'>Add Book</button>
+    </div>
+    
+
+
     <script src="scrypts/scripts.js"></script>
 </body>
 
