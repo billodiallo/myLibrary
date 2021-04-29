@@ -26,7 +26,7 @@ A user can signify a book to be read by clicking the read button or delete it aw
 - Javascript,
 - HTML-CSS
 - Bootstrap
-- Local-storage
+- Firebase
 
 ## Live Demo
 
