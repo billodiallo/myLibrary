@@ -16,7 +16,7 @@ Open the folder and double click on `index.html`
 
 > This Project entails building a mini e-library where we can store books with required parameterts of :Title,Author,Pages and Read.
 
-![screenshot]()
+![screenshot](./screenshot.png)
 
 A user can signify a book to be read by clicking the read button or delete it away.every book appears in it's own card with buttons to delete or add.
 
