@@ -1,2 +1,10 @@
-node_modules
-eslintrc.js
+.eslintcache/
+.eslintrc
+.eslintrc.yaml
+.eslintrc.json
+.eslintrc.js
+.stylelintcache/
+.stylelintrc
+.stylelintrc.yaml
+.stylelintrc.json
+.stylelintrc.js
