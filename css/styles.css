@@ -2,6 +2,7 @@ body,
 button {
   font-family: "Bebas Neue", cursive;
 }
+
 .forspan {
   color: red;
 }
@@ -31,6 +32,7 @@ body {
   overflow: hidden;
   z-index: -1;
 }
+
 .active {
   opacity: 1;
   height: auto;
@@ -61,6 +63,7 @@ body {
   text-align: center;
   box-shadow: black 2px 2px 10px;
 }
+
 .input {
   height: 4vh;
   width: 40vh;
