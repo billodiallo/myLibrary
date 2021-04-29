@@ -2,8 +2,12 @@
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
+  "globals": {
+    "Promise": "off"
+},
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2021,

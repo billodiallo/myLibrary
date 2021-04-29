@@ -1,3 +1,6 @@
+/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
+/*global some_unused_var */
+// eslint-disable-next-line no-undef
 module.exports = {
     "env": {
         "browser": true,

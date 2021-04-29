@@ -1,4 +1,3 @@
-// firestore below
 /* eslint-disable */
 const dbRefObject = firebase.database().ref().child('Books')
 /* eslint-enable */
@@ -59,6 +58,7 @@ function addBookToLibrary () {
   showForm()
 }
 /* eslint-enable */
+
 /* eslint-disable */
 function markRead(index) {
   if (myLibrary[index].read == 'No') {
@@ -71,7 +71,8 @@ function markRead(index) {
   writeUserData()
 }
 
-
+/* eslint-enable */
+/* eslint-disable */
 function deleteRow(index) {
   if (index > 1) {
   myLibrary.splice(index, index-1);
@@ -82,6 +83,7 @@ function deleteRow(index) {
   }
   writeUserData()
 }
+
 /* eslint-enable */
 function renderTable() {
   table.innerHTML = ''
