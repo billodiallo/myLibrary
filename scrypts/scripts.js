@@ -3,11 +3,11 @@ const dbRefObject = firebase.database().ref().child('Books')
 /* eslint-enable */
 let cloudLib = {};
 let cloudLibData = [];
-/* eslint no-trailing-spaces: [2, { "skipBlankLines": true }] */
+/* eslint-disable */
 dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
   cloudLibData = cloudLib.myLibrary;
-  /* eslint-disable */
+  /* eslint-enable */
   let myLibrary = cloudLibData;
   syncData()
   renderTable()
