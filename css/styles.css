@@ -1,0 +1,9 @@
+.forspan {
+    color: red;
+}
+
+#formElem {
+    line-height: 1.7;
+    padding-left: 10vh;
+    float: left;
+}
