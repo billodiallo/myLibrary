@@ -8,10 +8,13 @@ dbRefObject.on('value', snap => {
   cloudLib = snap.val();
   cloudLibData = cloudLib.myLibrary;
   /* eslint-enable */
+
+  /* eslint no-use-before-define: "error" */
+ /* eslint-env es6 */
   const myLibrary = cloudLibData;
   syncData();
   renderTable();
-})
+});
 /* eslint-enable */
 /* eslint-disable */
 function writeUserData() {
