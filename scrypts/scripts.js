@@ -4,10 +4,10 @@ const dbRefObject = firebase.database().ref().child('Books')
 let cloudLib = {};
 let cloudLibData = [];
 
-/*eslint no-trailing-spaces: "error"*/
+  /*eslint no-trailing-spaces: 2*/
 dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
-  cloudLibData = cloudLib['myLibrary'];
+  cloudLibData = cloudLib.myLibrary;
   /* eslint-disable */
   let myLibrary = cloudLibData;
   syncData()
@@ -86,7 +86,7 @@ function deleteRow(index) {
 
 /* eslint-enable */
 function renderTable() {
-  table.innerHTML = ''
+  table.innerHTML = '';
   /* eslint-disable */
   for (index = 0; index < cloudLibData.length; index++) {
     let newRow = table.insertRow(index);
