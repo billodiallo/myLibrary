@@ -30,7 +30,7 @@ A user can signify a book to be read by clicking the read button or delete it aw
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://raw.githack.com/billodiallo/myLibrary/feature_library/index.html)
 
 
 ## Authors
