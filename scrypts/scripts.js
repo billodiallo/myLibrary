@@ -2,10 +2,9 @@
 const dbRefObject = firebase.database().ref().child('Books')
 /* eslint-enable */
 let cloudLib = {};
-let cloudLibData = []
+let cloudLibData = [];
 
-dbRefObject.on('value', snap => {
-  //console.log(snap.val())
+dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
   cloudLibData = cloudLib["myLibrary"];
   /* eslint-disable */
@@ -101,10 +100,11 @@ function renderTable() {
 }
 /* eslint-enable */
 let hiddenForm = document.getElementById('hiddenForm')
+/* eslint-disable */
 function showForm() {
   hiddenForm.classList.toggle('active')
 }
-
+/* eslint-enable */
 /* eslint-disable */
 function syncData() {
   for (i = 0; i < cloudLibData.length; i++) {
