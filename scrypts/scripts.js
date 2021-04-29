@@ -4,9 +4,10 @@ const dbRefObject = firebase.database().ref().child('Books')
 let cloudLib = {};
 let cloudLibData = [];
 
+/*eslint no-trailing-spaces: "error"*/
 dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
-  cloudLibData = cloudLib["myLibrary"];
+  cloudLibData = cloudLib['myLibrary'];
   /* eslint-disable */
   let myLibrary = cloudLibData;
   syncData()
@@ -40,7 +41,7 @@ function newBook(title, author, pages, read) {
 
 let myLibrary = cloudLibData;
 /* eslint-enable */
-//pushes info from input form to create new object, clears form
+
 /* eslint-disable */
 function addBookToLibrary () {
   let newTitle = document.getElementById('newTitle').value;
@@ -99,7 +100,7 @@ function renderTable() {
   
 }
 /* eslint-enable */
-let hiddenForm = document.getElementById('hiddenForm')
+const hiddenForm = document.getElementById('hiddenForm');
 /* eslint-disable */
 function showForm() {
   hiddenForm.classList.toggle('active')
