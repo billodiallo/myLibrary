@@ -1,7 +1,7 @@
 // firestore below
-
+/* eslint-disable */
 const dbRefObject = firebase.database().ref().child('Books')
-
+/* eslint-enable */
 let cloudLib = {};
 let cloudLibData = []
 
@@ -9,11 +9,13 @@ dbRefObject.on('value', snap => {
   //console.log(snap.val())
   cloudLib = snap.val();
   cloudLibData = cloudLib["myLibrary"];
+  /* eslint-disable */
   let myLibrary = cloudLibData;
   syncData()
   renderTable()
 })
-
+/* eslint-enable */
+/* eslint-disable */
 function writeUserData() {
   firebase.database().ref('Books').set({
     myLibrary
@@ -39,8 +41,9 @@ function newBook(title, author, pages, read) {
 }
 
 let myLibrary = cloudLibData;
-
+/* eslint-enable */
 //pushes info from input form to create new object, clears form
+/* eslint-disable */
 function addBookToLibrary () {
   let newTitle = document.getElementById('newTitle').value;
   let newAuthor = document.getElementById('newAuthor').value;
@@ -55,8 +58,8 @@ function addBookToLibrary () {
 
   showForm()
 }
-
-//markes read as Yes/No
+/* eslint-enable */
+/* eslint-disable */
 function markRead(index) {
   if (myLibrary[index].read == 'No') {
     myLibrary[index].read = 'Yes'
@@ -68,7 +71,7 @@ function markRead(index) {
   writeUserData()
 }
 
-//deletes a single array object
+
 function deleteRow(index) {
   if (index > 1) {
   myLibrary.splice(index, index-1);
@@ -79,10 +82,10 @@ function deleteRow(index) {
   }
   writeUserData()
 }
-
-//is called every time the array is modified
+/* eslint-enable */
 function renderTable() {
   table.innerHTML = ''
+  /* eslint-disable */
   for (index = 0; index < cloudLibData.length; index++) {
     let newRow = table.insertRow(index);
     newRow.insertCell(0).innerText = cloudLibData[index].title;
@@ -94,21 +97,16 @@ function renderTable() {
   }
   
 }
-
+/* eslint-enable */
 let hiddenForm = document.getElementById('hiddenForm')
-//toggles the input form opacity and z-index
 function showForm() {
   hiddenForm.classList.toggle('active')
 }
 
-
-//const book1 = new newBook('American Gods', 'Neil Gaiman', 465, 'no')
-
+/* eslint-disable */
 function syncData() {
   for (i = 0; i < cloudLibData.length; i++) {
     myLibrary[i] = cloudLibData[i]
   }
 }
-
-
-
+/* eslint-enable */
