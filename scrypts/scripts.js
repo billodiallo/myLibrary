@@ -10,6 +10,9 @@ function newBook(title,author,pages,read) {
    writeUserData()
 
   }
+
+  //pushes info from input form to create new object, clears form
+  
   function addBookToLibrary() {
       let newTitle = document.getElementById('title').value;
       let newAuthor = document.getElementById('author').value;
