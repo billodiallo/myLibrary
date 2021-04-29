@@ -28,8 +28,9 @@
                     <span class='forspan'>Author:</span><br>
                     <span class='forspan'>Pages:</span><br>
                     <span class='forspan'>Read:</span><br>
-                    <span class='forspan'></span>
+                    <span class='forspan '></span>
                 </div>
+            
 
                 <div id='inputElem'>
                     <input class='input' type="text" id='newTitle'><br>
@@ -39,29 +40,31 @@
                     <button onclick='addBookToLibrary()' class='tableButtons'>Submit</button>
                     <button onclick='showForm()' class='tableButtons'>Cancel</button>
                 </div>
+        
             </div>
         </div>
     </div>
 
-    <div class="table table-striped">
-        <table class='tables'>
+    <div class="table table-striped ">
+        <table class='tables w-100'>
             <tr>
                 <th scope="col">Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Read</th>
-                <th>Mark Read</th>
-                <th>Delete Entry</th>
+                <th scope="col">Author</th>
+                <th scope="col">Pages</th>
+                <th scope="col">Read</th>
+                <th scope="col">Mark Read</th>
+                <th scope="col">Delete Entry</th>
             </tr>
         </table>
-        <table id='libraryTable' class='tables'>
+        <table id='libraryTable' class='tables w-100'>
 
         </table>
     </div>
 
     <div id='addDiv'>
-        <button id='addButton' onclick='showForm()'>Add Book</button>
+        <button class="btn btn-primary btn-lg active" id='addButton' onclick='showForm()'>Add Book</button>
     </div>
+    
     
 
 
