@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 module.exports = {
     "env": {
         "browser": true,
@@ -21,4 +22,5 @@ module.exports = {
     "rules": {
     }
 };
+
 /* eslint-disable */
