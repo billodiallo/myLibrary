@@ -9,11 +9,12 @@ dbRefObject.on('value', snap => {
   cloudLibData = cloudLib.myLibrary;
   /* eslint-enable */
 
-  /* eslint no-use-before-define: "error" */
- /* eslint-env es6 */
+  /* eslint-disable */
+
   const myLibrary = cloudLibData;
   syncData();
   renderTable();
+  /* eslint-enable */
 });
 /* eslint-enable */
 /* eslint-disable */
