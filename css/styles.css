@@ -7,3 +7,9 @@
     padding-left: 10vh;
     float: left;
 }
+
+#hiddenFormDiv {
+    width: 80vh;
+    margin: auto;
+    margin-top: 12vh;
+}
