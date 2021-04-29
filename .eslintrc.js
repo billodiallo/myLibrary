@@ -1,10 +1,8 @@
-/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
-/*global some_unused_var */
-// eslint-disable-next-line no-undef
+/* eslint-disable */
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": false
+        "es2021": true
     },
     "extends": [
         "eslint:recommended",
@@ -14,7 +12,7 @@ module.exports = {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": ,
         "sourceType": "module"
     },
     "plugins": [
@@ -23,3 +21,4 @@ module.exports = {
     "rules": {
     }
 };
+/* eslint-disable */
