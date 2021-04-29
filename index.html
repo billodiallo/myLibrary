@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet", type="text/html" href="css/style.css">
+    <link rel="stylesheet" type="text/html"  href="css/styles.css">
     <title>Our javacript library</title>
 </head>
 
 <body>
+  
+    <div id='aaa'>
 
- <div>
-    <table style="width:100%">
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Read</th>
-        </tr>
-        
-      </table>
- </div>
-   
+        <table class='tables'>
+            <tr>
+        <span class='forspan'>Title</span><br>
+        <span class='forspan'>Author</span><br>
+        <span class='forspan'>Pages</span><br>
+        <span class='forspan'>Read</span><br>
+    </tr>
+</table>
+<table id='libraryTable' class='tables'>
+
+</table>
+
+
+    </div>
+
 
     <form>
-    <div>
-     <label for="title">Title:</label>
-    <input type="text" id="newTitle" name="title"><br>
-    <label for="author">Author:</label>
-    <input type="text" id="newAuthor" name="Author"><br>
-    <label for="pages">Pages:</label>
-    <input type="text" id="newPages" name="Pages"><br>
-    <label for="Read">Read:</label>
-    <input type="text" id="newRead" name="read"><br>
-    <input type="submit" value="Submit">
-    <input type="submit" value="Remove">
-    </div>
-    
-</form>
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="newTitle" name="title"><br>
+            <label for="author">Author:</label>
+            <input type="text" id="newAuthor" name="Author"><br>
+            <label for="pages">Pages:</label>
+            <input type="text" id="newPages" name="Pages"><br>
+            <label for="Read">Read:</label>
+            <input type="text" id="newRead" name="read"><br>
+            <input type="submit" value="Submit">
+            <input type="submit" value="Remove">
+        </div>
 
-    <script src = "scrypts/scripts.js"></script>
+    </form>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="scrypts/scripts.js"></script>
 </body>
+
 </html>
