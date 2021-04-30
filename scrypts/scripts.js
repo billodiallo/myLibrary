@@ -33,7 +33,6 @@ function newBook(title, author, pages, read) {
   myLibrary.push(this)
    writeUserData()
 
-  //console.table(this);
 }
 
 let myLibrary = cloudLibData;
