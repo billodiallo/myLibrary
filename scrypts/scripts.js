@@ -1,4 +1,3 @@
-/* eslint-disable */
 const dbRefObject = firebase.database().ref().child('Books')
 /* eslint-enable */
 let cloudLib = {};
