@@ -1,8 +1,6 @@
 const dbRefObject = firebase.database().ref().child('Books')
-/* eslint-enable */
 let cloudLib = {};
 let cloudLibData = [];
-/* eslint-disable */
 dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
   cloudLibData = cloudLib.myLibrary;
