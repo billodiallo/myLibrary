@@ -10,10 +10,9 @@ dbRefObject.on('value', snap => {
   const myLibrary = cloudLibData;
   syncData();
   renderTable();
-  /* eslint-enable */
+  
 });
-/* eslint-enable */
-/* eslint-disable */
+
 function writeUserData() {
   firebase.database().ref('Books').set({
     myLibrary
@@ -24,7 +23,6 @@ function writeUserData() {
 
 const table = document.getElementById('libraryTable');
 
-//creates new book object
 function newBook(title, author, pages, read) {
 
   this.title = title;
