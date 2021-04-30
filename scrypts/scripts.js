@@ -77,7 +77,6 @@ function deleteRow(index) {
 
 function renderTable() {
   table.innerHTML = '';
-  /* eslint-disable */
   for (index = 0; index < cloudLibData.length; index++) {
     let newRow = table.insertRow(index);
     newRow.insertCell(0).innerText = cloudLibData[index].title;
@@ -89,9 +88,8 @@ function renderTable() {
   }
   
 }
-/* eslint-enable */
 const hiddenForm = document.getElementById('hiddenForm');
-/* eslint-disable */
+
 function showForm() {
   hiddenForm.classList.toggle('active')
 }
