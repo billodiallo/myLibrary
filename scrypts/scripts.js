@@ -1,118 +1,108 @@
-/* eslint-disable */
-const dbRefObject = firebase.database().ref().child('Books')
-/* eslint-enable */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-new */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-undef */
+let firebase;
+
+const dbRefObject = firebase.database().ref().child('Books');
+
 let cloudLib = {};
 let cloudLibData = [];
-/* eslint-disable */
-dbRefObject.on('value', snap => { 
+dbRefObject.on('value', (snap) => {
   cloudLib = snap.val();
   cloudLibData = cloudLib.myLibrary;
-  /* eslint-enable */
 
-  /* eslint-disable */
-
+  // eslint-disable-next-line no-unused-vars
   const myLibrary = cloudLibData;
   syncData();
+  // eslint-disable-next-line no-use-before-define
   renderTable();
-  /* eslint-enable */
 });
-/* eslint-enable */
-/* eslint-disable */
+
 function writeUserData() {
   firebase.database().ref('Books').set({
-    myLibrary
+    myLibrary,
   });
 
-  renderTable()
+  renderTable();
 }
 
 const table = document.getElementById('libraryTable');
 
-//creates new book object
 function newBook(title, author, pages, read) {
-
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
 
-  myLibrary.push(this)
-   writeUserData()
-
-  //console.table(this);
+  myLibrary.push(this);
+  writeUserData();
 }
 
 let myLibrary = cloudLibData;
-/* eslint-enable */
 
-/* eslint-disable */
-function addBookToLibrary () {
-  let newTitle = document.getElementById('newTitle').value;
-  let newAuthor = document.getElementById('newAuthor').value;
-  let newPages = document.getElementById('newPages').value;
-  let newRead = document.getElementById('newRead').value;
-  new newBook(newTitle, newAuthor, newPages, newRead);
+// eslint-disable-next-line no-unused-vars
+function addBookToLibrary() {
+  const newTitle = document.getElementById('newTitle').value;
+  const newAuthor = document.getElementById('newAuthor').value;
+  const newPages = document.getElementById('newPages').value;
+  const newRead = document.getElementById('newRead').value;
+  new NewBook(newTitle, newAuthor, newPages, newRead);
 
   document.getElementById('newTitle').value = '';
   document.getElementById('newAuthor').value = '';
   document.getElementById('newPages').value = '';
   document.getElementById('newRead').value = '';
 
-  showForm()
+  showForm();
 }
-/* eslint-enable */
 
-/* eslint-disable */
 function markRead(index) {
-  if (myLibrary[index].read == 'No') {
-    myLibrary[index].read = 'Yes'
-    document.getElementById(`read${index}`).innerHTML = `<span id='read${index}'>${myLibrary[index].read}</span>`
+  if (myLibrary[index].read === 'No') {
+    myLibrary[index].read = 'Yes';
+    document.getElementById(`read${index}`).innerHTML = `<span id='read${index}'>${myLibrary[index].read}</span>`;
   } else {
-    myLibrary[index].read = 'No'
-    document.getElementById(`read${index}`).innerHTML = `<span id='read${index}'>${myLibrary[index].read}</span>`
+    myLibrary[index].read = 'No';
+    document.getElementById(`read${index}`).innerHTML = `<span id='read${index}'>${myLibrary[index].read}</span>`;
   }
-  writeUserData()
+  writeUserData();
 }
 
-/* eslint-enable */
-/* eslint-disable */
+// eslint-disable-next-line no-unused-vars
 function deleteRow(index) {
   if (index > 1) {
-  myLibrary.splice(index, index-1);
-  } else if (index == 1) {
+    myLibrary.splice(index, index - 1);
+  } else if (index === 1) {
     myLibrary.splice(index, index);
-  } else if (index == 0) {
+  } else if (index === 0) {
     myLibrary.shift();
   }
-  writeUserData()
+  writeUserData();
 }
 
-/* eslint-enable */
 function renderTable() {
   table.innerHTML = '';
-  /* eslint-disable */
+
   for (index = 0; index < cloudLibData.length; index++) {
-    let newRow = table.insertRow(index);
+    const newRow = table.insertRow(index);
     newRow.insertCell(0).innerText = cloudLibData[index].title;
     newRow.insertCell(1).innerText = cloudLibData[index].author;
     newRow.insertCell(2).innerText = cloudLibData[index].pages;
     newRow.insertCell(3).innerHTML = `<span id='read${index}'>${cloudLibData[index].read}</span>`;
     newRow.insertCell(4).innerHTML = `<button onclick='markRead(${index})' class='tableButtons' >Check</button>`;
-    newRow.insertCell(5).innerHTML = `<button onclick='deleteRow(${index})' class='tableButtons' >Delete</button>`
+    newRow.insertCell(5).innerHTML = `<button onclick='deleteRow(${index})' class='tableButtons' >Delete</button>`;
   }
-  
 }
-/* eslint-enable */
+
 const hiddenForm = document.getElementById('hiddenForm');
-/* eslint-disable */
+
 function showForm() {
-  hiddenForm.classList.toggle('active')
+  hiddenForm.classList.toggle('active');
 }
-/* eslint-enable */
-/* eslint-disable */
+
 function syncData() {
   for (i = 0; i < cloudLibData.length; i++) {
-    myLibrary[i] = cloudLibData[i]
+    myLibrary[i] = cloudLibData[i];
   }
 }
-/* eslint-enable */
