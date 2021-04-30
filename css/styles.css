@@ -66,9 +66,9 @@ body {
 
 .input {
   height: 4vh;
-  width: 4vh;
-  margin: 2vh;
-  border-radius: 1.6vh;
+  width: 40vh;
+  margin: 1vh;
+  border-radius: 1.4vh;
   font-size: 3vh;
   font-family: "Bebas Neue", cursive;
 }
