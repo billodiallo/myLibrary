@@ -3,10 +3,9 @@ let cloudLib = {};
 let cloudLibData = [];
 dbRefObject.on('value', snap => { 
   cloudLib = snap.val();
-  cloudLibData = cloudLib.myLibrary;
-  /* eslint-enable */
 
-  /* eslint-disable */
+  cloudLibData = cloudLib.myLibrary;
+ 
 
   const myLibrary = cloudLibData;
   syncData();
