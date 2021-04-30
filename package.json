@@ -1,0 +1,35 @@
+{
+  "name": "exit",
+  "version": "1.0.0",
+  "description": "  ",
+  "main": "scrypts/scrypts.js",
+  "dependencies": {
+    "eslint-formatter-pretty": "^4.0.0",
+    "install-peerdeps": "^3.0.3",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.17.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.23.2"
+  },
+  "scripts": {
+    "lint":"eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billodiallo/myLibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billodiallo/myLibrary/issues"
+  },
+  "homepage": "https://github.com/billodiallo/myLibrary#readme",
+  "keywords": []
+}
