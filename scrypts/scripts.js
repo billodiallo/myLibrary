@@ -36,9 +36,7 @@ function newBook(title, author, pages, read) {
 }
 
 let myLibrary = cloudLibData;
-/* eslint-enable */
 
-/* eslint-disable */
 function addBookToLibrary () {
   let newTitle = document.getElementById('newTitle').value;
   let newAuthor = document.getElementById('newAuthor').value;
