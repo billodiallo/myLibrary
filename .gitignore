@@ -8,3 +8,4 @@
 .stylelintrc.yaml
 .stylelintrc.json
 .stylelintrc.js
+/node_modules
