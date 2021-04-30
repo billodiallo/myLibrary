@@ -93,11 +93,9 @@ const hiddenForm = document.getElementById('hiddenForm');
 function showForm() {
   hiddenForm.classList.toggle('active')
 }
-/* eslint-enable */
-/* eslint-disable */
 function syncData() {
   for (i = 0; i < cloudLibData.length; i++) {
     myLibrary[i] = cloudLibData[i]
   }
 }
-/* eslint-enable */
+
