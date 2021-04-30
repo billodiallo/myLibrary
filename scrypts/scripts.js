@@ -63,8 +63,7 @@ function markRead(index) {
   writeUserData()
 }
 
-/* eslint-enable */
-/* eslint-disable */
+
 function deleteRow(index) {
   if (index > 1) {
   myLibrary.splice(index, index-1);
@@ -76,7 +75,6 @@ function deleteRow(index) {
   writeUserData()
 }
 
-/* eslint-enable */
 function renderTable() {
   table.innerHTML = '';
   /* eslint-disable */
