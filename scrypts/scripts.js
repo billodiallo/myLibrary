@@ -51,9 +51,7 @@ function addBookToLibrary () {
 
   showForm()
 }
-/* eslint-enable */
 
-/* eslint-disable */
 function markRead(index) {
   if (myLibrary[index].read == 'No') {
     myLibrary[index].read = 'Yes'
